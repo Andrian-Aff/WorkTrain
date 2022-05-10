@@ -1,0 +1,9 @@
+{
+  "DashboardGroupCode": "Demo",
+  "Description": "",
+  "DescriptionUrl": "",
+  "ModelType": "Dashboard",
+  "Code": "DemoFilters",
+  "Name": "DemoFilters",
+  "IsAnonymousAccess": true
+}

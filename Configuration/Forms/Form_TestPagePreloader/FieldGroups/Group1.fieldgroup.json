@@ -1,0 +1,130 @@
+{
+  "Code": "Group1",
+  "Name": "Group1",
+  "Position": 1,
+  "Fields": [
+    {
+      "Code": "PhoneNumber1",
+      "Name": "PhoneNumber1",
+      "FieldType": "text",
+      "Position": 1,
+      "IsRequired": false,
+      "Mask": "(000) 000 00 00",
+      "MaskPrefix": "+",
+      "ShowMask": true,
+      "MaskValidation": true
+    },
+    {
+      "Code": "PhoneNumber2",
+      "Name": "PhoneNumber2",
+      "FieldType": "text",
+      "Position": 2,
+      "Mask": "(000)-000-00-00",
+      "MaskPrefix": "+",
+      "ShowMask": true,
+      "IsRequired": false,
+      "MaskValidation": true
+    },
+    {
+      "Code": "PhoneNumber3",
+      "Name": "PhoneNumber3",
+      "FieldType": "text",
+      "Position": 3,
+      "IsRequired": false,
+      "Mask": "000 0000",
+      "MaskPrefix": "+(380)",
+      "ShowMask": true,
+      "MaskValidation": true,
+      "MaskDropSpecialCharacters": false
+    },
+    {
+      "Code": "PhoneNumber4",
+      "Name": "PhoneNumber4",
+      "FieldType": "text",
+      "Position": 4,
+      "Mask": "[000]-[000]-[0000]",
+      "MaskPrefix": "+",
+      "ShowMask": true,
+      "IsRequired": false,
+      "MaskValidation": true,
+      "MaskDropSpecialCharacters": false
+    },
+    {
+      "Code": "CarNumber",
+      "Name": "CarNumber",
+      "FieldType": "text",
+      "Position": 5,
+      "Mask": "EE 00 00 EE",
+      "ShowMask": true,
+      "IsRequired": false,
+      "MaskValidation": true
+    },
+    {
+      "Code": "Distance",
+      "Name": "Distance",
+      "FieldType": "text",
+      "Position": 6,
+      "Mask": "separator",
+      "MaskSuffix": " км",
+      "ShowMask": false,
+      "IsRequired": false,
+      "MaskValidation": true
+    },
+    {
+      "Code": "Percent",
+      "Name": "Percent",
+      "FieldType": "text",
+      "Position": 7,
+      "Mask": "percent",
+      "MaskSuffix": "%",
+      "ShowMask": false,
+      "IsRequired": false,
+      "MaskValidation": true
+    },
+    {
+      "Code": "NumberSum",
+      "Name": "NumberSum",
+      "FieldType": "text",
+      "Position": 8,
+      "Mask": "999999",
+      "MaskSuffix": " грн.",
+      "ShowMask": true,
+      "IsRequired": false,
+      "MaskValidation": true
+    },
+    {
+      "Code": "NumberPercent",
+      "Name": "NumberPercent",
+      "FieldType": "text",
+      "Position": 9,
+      "Mask": "999",
+      "MaskSuffix": "%",
+      "ShowMask": true,
+      "IsRequired": false,
+      "MaskValidation": true,
+      "MaskDropSpecialCharacters": false
+    },
+    {
+      "Code": "CarNumber2",
+      "Name": "CarNumber2",
+      "FieldType": "text",
+      "Position": 10,
+      "Mask": "EE 00 00 EE",
+      "ShowMask": true,
+      "IsRequired": false,
+      "MaskValidation": false,
+      "IconHint": "Приклад: AF 4589 XO",
+      "Icon": "help"
+    },
+    {
+      "Code": "Ip",
+      "Name": "Ip",
+      "FieldType": "text",
+      "Position": 11,
+      "Mask": "IP",
+      "ShowMask": true,
+      "IsRequired": false,
+      "MaskValidation": false
+    }
+  ]
+}

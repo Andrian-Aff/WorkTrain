@@ -1,0 +1,8 @@
+{
+  "ModelType": "Query",
+  "Code": "File_InsertRow",
+  "Name": "File_InsertRow",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": false
+}

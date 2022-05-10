@@ -1,0 +1,13 @@
+Update [dbo].[Template] set  [ColDate] = @ColDate
+							  ,[ColTime] = @ColTime
+							  ,[ColDateTime] = @ColDateTime
+							  ,[ColChar] = @ColChar
+							  ,[ColVarchar] = @ColVarchar
+							  ,[ColIntRadio] =  @ColIntRadio
+							  ,[ColBitCheck] = @ColBitCheck
+							  ,[ColIntTree] = @ColIntTree
+							  ,[ColFile] = @ColFile
+							  ,[ColFileName] = @ColFileName
+							  ,[ColImage] = @ColImage
+							  ,[ColDecimal] = @ColDecimal
+Where [Id] = @Id

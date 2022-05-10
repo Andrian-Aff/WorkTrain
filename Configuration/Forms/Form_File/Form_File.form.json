@@ -1,0 +1,15 @@
+{
+    "ModelType": "Form",
+    "Code": "Form_File",
+    "Name": "Form_File",
+    "Details": [
+        "string:Details\\Det_Files.detail.json"
+    ],
+    "Config": {
+        "FieldGroups": [
+            "string:FieldGroups\\Group_1.fieldgroup.json"
+        ],
+        "DefaultFields": [],
+        "Script": "string:Form_File.form.js"
+    }
+}

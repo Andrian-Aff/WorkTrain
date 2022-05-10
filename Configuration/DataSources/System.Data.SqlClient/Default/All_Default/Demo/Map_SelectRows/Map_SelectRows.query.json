@@ -1,0 +1,29 @@
+{
+  "ModelType": "Query",
+  "Code": "Map_SelectRows",
+  "Name": "Map_SelectRows",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": true,
+  "Sql": "SELECT * FROM (VALUES\r\t (N'47.57119',N'34.39637',N'https://rtsp.me/embed/123124/')\r\t,(N'46.64287',N'30.53676',N'https://rtsp.me/embed/123123124/')\r) as x([X],[Y],[Link])\r",
+  "Columns": [
+    {
+      "Code": "X",
+      "Name": "X",
+      "Position": 0,
+      "IsPrintable": false
+    },
+    {
+      "Code": "Y",
+      "Name": "Y",
+      "Position": 1,
+      "IsPrintable": false
+    },
+    {
+      "Code": "Link",
+      "Name": "Link",
+      "Position": 2,
+      "IsPrintable": false
+    }
+  ]
+}

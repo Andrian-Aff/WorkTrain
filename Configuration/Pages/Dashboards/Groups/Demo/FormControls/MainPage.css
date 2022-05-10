@@ -1,0 +1,119 @@
+#CustomWidget-0 {
+    background: #e1faf3;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.main-block-controls {
+    width: 80%;
+    background: #fffffe;
+    height: 90%;
+    padding: 5%;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgb(177 237 220);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+}
+
+
+.block-control {
+    width: 50%;
+}
+
+
+/*control-text START*/
+    .control-text-label {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 150%;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        color: #3C4858;
+        align-items: center;
+        text-shadow: 0 0 #3c4858;
+
+        
+    }
+
+    .control-text-input {
+        /* font-family: Roboto; */
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 150%;
+        /* display: flex; */
+        align-items: center;
+        letter-spacing: 0.01em;
+        color: #000000;
+
+        width: 95%;
+        height: 48px;
+        background: #F6FFFD;
+        border-radius: 4px;
+        padding: 12px;
+        border: none;
+        max-width: 100%;
+    }
+
+    .control-text-input:focus{outline:none;}
+
+
+    .control-text-input::placeholder {
+        /* font-family: Roboto; */
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 150%;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.01em;
+        color: #A8C0B9;
+    }
+/*control-text END*/
+
+
+/*control-text-error START*/
+    .control-text-input-error {
+        /* font-family: Roboto; */
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 150%;
+        align-items: center;
+        letter-spacing: 0.01em;
+        color: #000000;
+        width: 95%;
+        height: 48px;
+        background: #fff5f5; /*в этом отличие*/
+        border-radius: 4px;
+        padding: 12px;
+        border: 1px solid #fe7c7c; /*в этом отличие*/
+        max-width: 100%;
+    }
+
+    /*то что ниже такое же как и в инпуте выше*/
+    .control-text-input-error:focus{outline:none;}
+    .control-text-input-error::placeholder {
+        /* font-family: Roboto; */
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 150%;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.01em;
+        color: #A8C0B9;
+    }
+
+/*control-text-error END*/

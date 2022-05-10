@@ -1,0 +1,21 @@
+{
+  "ModelType": "Detail",
+  "DetailType": "File",
+  "Code": "Det_Files",
+  "FormCode": "Form_File_Detail",
+  "Name": "Файли",
+  "SelectRowsQueryCode": "File_Detail_SelectRows",
+  "SelectRowQueryCode": "File_Detail_SelectRow",
+  "DeleteQueryCode": "File_Detail_DeleteRow",
+  "UpdateQueryCode": "File_Detail_UpdateRow",
+  "SectionCode": "",
+  "Position": 1,
+  "IsExpand": true,
+  "Add": {
+    "InsertQueryCode": "File_Detail_InsertRow"
+  },
+  "QueryParameters": [{
+    "FormFieldName": "Id",
+    "ParameterCode": "@File_Id"
+  }]
+}

@@ -1,0 +1,10 @@
+{
+  "Position": 1,
+  "DashboardGroupCode": "Demo",
+  "Description": "",
+  "DescriptionUrl": "",
+  "IsVisible": true,
+  "ModelType": "Dashboard",
+  "Code": "FieldGroup",
+  "Name": "FieldGroup"
+}

@@ -1,0 +1,8 @@
+{
+  "ModelType": "Query",
+  "Code": "File_UpdateRow",
+  "Name": "File_UpdateRow",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": false
+}

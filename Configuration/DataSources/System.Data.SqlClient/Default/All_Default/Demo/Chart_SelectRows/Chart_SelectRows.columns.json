@@ -1,0 +1,38 @@
+[
+  {
+    "Code": "Received",
+    "Name": "Received",
+    "Position": 1,
+    "IsPrintable": false
+  },
+  {
+    "Code": "IsAdressPhone",
+    "Name": "IsAdressPhone",
+    "Position": 2,
+    "IsPrintable": false
+  },
+  {
+    "Code": "IsPhone",
+    "Name": "IsPhone",
+    "Position": 3,
+    "IsPrintable": false
+  },
+  {
+    "Code": "IsAdress",
+    "Name": "IsAdress",
+    "Position": 4,
+    "IsPrintable": false
+  },
+  {
+    "Code": "IsNotAdressPhone",
+    "Name": "IsNotAdressPhone",
+    "Position": 5,
+    "IsPrintable": false
+  },
+  {
+    "Code": "Procent",
+    "Name": "Procent",
+    "Position": 6,
+    "IsPrintable": false
+  }
+]

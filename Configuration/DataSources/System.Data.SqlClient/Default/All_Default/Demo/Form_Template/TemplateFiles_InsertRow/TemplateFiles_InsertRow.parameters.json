@@ -1,0 +1,16 @@
+[
+  {
+    "Code": "@File",
+    "Name": "File",
+    "ParameterType": "Varbinary"
+  },
+  {
+    "Code": "@Name",
+    "Name": "Name"
+  },
+  {
+    "Code": "@TemplateId",
+    "Name": "TemplateId",
+    "ParameterType": "Integer"
+  }
+]

@@ -1,0 +1,35 @@
+{
+	"ModelType":"Query",
+	"Code":"selectrows",
+	"Name":"selectrows",
+	"ConnectionCode":"Default",
+	"Sql":"string:selectrows.sql",
+	"Columns": [
+		{
+		  "Code": "Id",
+		  "Name": "Id",
+		  "Position": 1
+		},
+		{
+			"Code": "Name",
+			"Name": "Name",
+			"Position": 2,
+			"SqlName": "Name",
+			"FilterParameterCode": "@Name"
+		  }
+	],
+	"Parameters": [
+		{
+		  "Code": "@pageLimitRows",
+		  "Name": "pageLimitRows",
+		  "ParameterType": "Integer",
+		  "IsPageLimitRows": true
+		},
+		{
+		  "Code": "@pageOffsetRows",
+		  "Name": "pageOffsetRows",
+		  "ParameterType": "Integer",
+		  "IsPageOffsetRows": true
+		}
+	  ]
+}

@@ -1,0 +1,13 @@
+{
+	"Add": {
+	  "InsertQueryCode": "Test_Mask_InsertRow"
+	},
+	"ModelType": "Section",
+	"Code": "TestMask",
+	"Name": "TestMask",
+	"FormCode": "Form_TestMask",
+	"SelectRowsQueryCode": "Test_Mask_SelectRows",
+	"SelectRowQueryCode": "Test_Mask_SelectRow",
+	"UpdateQueryCode": "Test_Mask_UpdateRow",
+	"DeleteQueryCode": "Test_Mask_DeleteRow"
+  }

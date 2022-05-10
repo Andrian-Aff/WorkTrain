@@ -1,0 +1,13 @@
+{
+  "ModelType": "Form",
+  "Code": "Form_TestPagePreloader",
+  "Name": "Form_TestPagePreloader",
+  "Details": [],
+  "Config": {
+    "FieldGroups": [
+      "string:FieldGroups\\Group1.fieldgroup.json"
+    ],
+    "DefaultFields": [],
+    "Script": "string:Form_TestPagePreloader.form.js"
+  }
+}

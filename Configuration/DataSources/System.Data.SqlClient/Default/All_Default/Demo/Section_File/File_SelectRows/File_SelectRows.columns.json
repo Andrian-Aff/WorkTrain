@@ -1,0 +1,36 @@
+[
+  {
+    "Code": "Id",
+    "Name": "Id",
+    "Position": 1,
+    "IsPrimaryKey": true,
+    "ViewState": "Hidden",
+    "IsPrintable": false
+  },
+  {
+    "Code": "File_Img",
+    "Name": "File_Img",
+    "Position": 2,
+    "ViewState": "Hidden",
+    "IsPrintable": false
+  },
+  {
+    "Code": "File_Img_Name",
+    "Name": "File_Img_Name",
+    "Position": 3,
+    "IsPrintable": false
+  },
+  {
+    "Code": "File",
+    "Name": "File",
+    "Position": 4,
+    "ViewState": "Hidden",
+    "IsPrintable": false
+  },
+  {
+    "Code": "File_Name",
+    "Name": "File_Name",
+    "Position": 5,
+    "IsPrintable": false
+  }
+]

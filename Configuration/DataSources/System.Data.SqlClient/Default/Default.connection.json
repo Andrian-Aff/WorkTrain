@@ -1,0 +1,7 @@
+{
+"ModelType": "Connection",
+    "Code": "Default",
+    "Name": "Подключение по-умолчанию",
+    "ProviderCode": "System.Data.SqlClient",
+    "ConnectionString": "string:c:\\Dev\\ConnectionStrings\\QWPlatform_Demo\\Default.connectionString.txt"
+}

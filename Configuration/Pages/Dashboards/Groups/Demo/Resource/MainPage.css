@@ -1,0 +1,16 @@
+.panel {
+    padding: 10px;
+    border: 2px solid;
+    width: fit-content;
+    margin: 3px;
+    align-items: center;
+    justify-content: center;
+}
+
+.size {
+    height: 50px;
+}
+
+.test-svg {
+    background: center / contain no-repeat url("/modules/res/test.svg");
+}

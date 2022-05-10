@@ -1,0 +1,18 @@
+{
+  "DetailType": "File",
+  "ModelType": "Detail",
+  "Code": "det_TemplateFiles",
+  "Name": "Файлы",
+  "SelectRowsQueryCode": "TemplateFiles_SelectRows",
+  "SelectRowQueryCode": "TemplateFiles_SelectRow",
+  "SectionCode": "",
+  "Position": 1,
+  "IsExpand": true,
+  "Add": {
+    "InsertQueryCode": "TemplateFiles_InsertRow"
+  },
+  "QueryParameters": [{
+    "FormFieldName": "Id",
+    "ParameterCode": "@TemplateId"
+  }]
+}

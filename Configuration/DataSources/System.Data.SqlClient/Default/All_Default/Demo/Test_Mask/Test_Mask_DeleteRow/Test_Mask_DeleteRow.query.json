@@ -1,0 +1,18 @@
+{
+  "ModelType": "Query",
+  "Code": "Test_Mask_DeleteRow",
+  "Name": "Test_Mask_DeleteRow",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": false,
+  "Parameters": [
+    {
+      "Code": "@Id",
+      "Name": "Id",
+      "ParameterType": "Integer",
+      "IsPrimaryKey": true,
+      "IsPageOffsetRows": false,
+      "IsPageLimitRows": false
+    }
+  ]
+}

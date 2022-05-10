@@ -1,0 +1,120 @@
+{
+  "ModelType": "Query",
+  "Code": "Test_Mask_SelectRow",
+  "Name": "Test_Mask_SelectRow",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": false,
+  "Columns": [
+    {
+      "Code": "Id",
+      "Name": "Id",
+      "Position": 1,
+      "IsPrimaryKey": true,
+      "ViewState": "Hidden",
+      "IsPrintable": false,
+      "SqlName": "[t].[Id]",
+      "FilterParameterCode": "@Id"
+    },
+    {
+      "Code": "PhoneNumber1",
+      "Name": "PhoneNumber1",
+      "Position": 2,
+      "IsPrimaryKey": false,
+      "ViewState": "Visible",
+      "IsPrintable": false,
+      "SqlName": "[t].[PhoneNumber1]",
+      "FilterParameterCode": "@PhoneNumber1"
+    },
+    {
+      "Code": "PhoneNumber2",
+      "Name": "PhoneNumber2",
+      "Position": 3,
+      "IsPrimaryKey": false,
+      "ViewState": "Visible",
+      "IsPrintable": false,
+      "SqlName": "[t].[PhoneNumber2]",
+      "FilterParameterCode": "@PhoneNumber2"
+    },
+    {
+      "Code": "PhoneNumber3",
+      "Name": "PhoneNumber3",
+      "Position": 4,
+      "IsPrimaryKey": false,
+      "ViewState": "Visible",
+      "IsPrintable": false,
+      "SqlName": "[t].[PhoneNumber3]",
+      "FilterParameterCode": "@PhoneNumber3"
+    },
+    {
+      "Code": "PhoneNumber4",
+      "Name": "PhoneNumber4",
+      "Position": 5,
+      "IsPrimaryKey": false,
+      "ViewState": "Visible",
+      "IsPrintable": false,
+      "SqlName": "[t].[PhoneNumber4]",
+      "FilterParameterCode": "@PhoneNumber4"
+    },
+    {
+      "Code": "CarNumber",
+      "Name": "CarNumber",
+      "Position": 6,
+      "IsPrimaryKey": false,
+      "ViewState": "Visible",
+      "IsPrintable": false,
+      "SqlName": "[t].[CarNumber]",
+      "FilterParameterCode": "@CarNumber"
+    },
+    {
+      "Code": "Distance",
+      "Name": "Distance",
+      "Position": 7,
+      "IsPrimaryKey": false,
+      "ViewState": "Visible",
+      "IsPrintable": false,
+      "SqlName": "[t].[Distance]",
+      "FilterParameterCode": "@Distance"
+    },
+    {
+      "Code": "Percent",
+      "Name": "Percent",
+      "Position": 8,
+      "IsPrimaryKey": false,
+      "ViewState": "Visible",
+      "IsPrintable": false,
+      "SqlName": "[t].[Percent]",
+      "FilterParameterCode": "@Percent"
+    },
+    {
+      "Code": "NumberSum",
+      "Name": "NumberSum",
+      "Position": 9,
+      "IsPrimaryKey": false,
+      "ViewState": "Visible",
+      "IsPrintable": false,
+      "SqlName": "[t].[NumberSum]",
+      "FilterParameterCode": "@NumberSum"
+    },
+    {
+      "Code": "NumberPercent",
+      "Name": "NumberPercent",
+      "Position": 10,
+      "IsPrimaryKey": false,
+      "ViewState": "Visible",
+      "IsPrintable": false,
+      "SqlName": "[t].[NumberPercent]",
+      "FilterParameterCode": "@NumberPercent"
+    }
+  ],
+  "Parameters": [
+    {
+      "Code": "@Id",
+      "Name": "Id",
+      "ParameterType": "Integer",
+      "IsPrimaryKey": true,
+      "IsPageOffsetRows": false,
+      "IsPageLimitRows": false
+    }
+  ]
+}

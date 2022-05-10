@@ -1,0 +1,19 @@
+{
+    "ModelType": "Form",
+    "Code": "Form_File_Detail",
+    "Name": "Файли",
+    "Details": [],
+    "Config": {
+        "FieldGroups": [
+            "string:FieldGroups\\Group_1.fieldgroup.json"
+        ],
+        "DefaultFields": [
+          {
+            "Code": "File_Id",
+            "ParentFormFieldCodeForKeyValue": "Id",
+            "ParentFormFieldCodeForDisplayValue": "Id"
+          }
+        ],
+        "Script": "string:Form_File_Detail.form.js"
+    }
+}

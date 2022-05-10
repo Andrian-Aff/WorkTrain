@@ -1,0 +1,12 @@
+{
+  "ModelType": "Form",
+  "Code": "Form_TestMask",
+  "Name": "Form_TestMask",
+  "Details": [],
+  "Config": {
+    "FieldGroups": [
+      "string:FieldGroups\\Group1.fieldgroup.json"
+    ],
+    "DefaultFields": []
+  }
+}

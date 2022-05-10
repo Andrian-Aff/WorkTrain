@@ -1,0 +1,46 @@
+{
+  "Code": "Main",
+  "Name": "Основна інформація",
+  "Position": 1,
+  "Fields": [
+    {
+      "Code": "File",
+      "Name": "File",
+      "FieldType": "file",
+      "Position": 1,
+      "Width": "100%",
+      "FileNameColumnCode": "File_Name"
+    },
+    {
+      "Code": "File_Name",
+      "Name": "File_Name",
+      "FieldType": "text",
+      "Width": "100%",
+      "Position": 2
+    },
+    {
+      "Code": "File_Img",
+      "Name": "File_Img",
+      "FieldType": "image",
+      "Position": 3,
+      "Width": "100px",
+      "Height": "100px",
+      "FileNameColumnCode": "File_Img_Name"
+    },
+    {
+      "Code": "File_Img_Name",
+      "Name": "File_Img_Name",
+      "FieldType": "text",
+      "Width": "100%",
+      "Position": 4
+    },
+    {
+      "Code": "Id",
+      "Name": "Id",
+      "FieldType": "number",
+      "Position": 99,
+      "Width": "15%",
+      "IsHidden": true
+    }
+  ]
+}

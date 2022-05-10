@@ -1,0 +1,13 @@
+{
+  "Add": {
+    "InsertQueryCode": "File_InsertRow"
+  },
+  "ModelType": "Section",
+  "Code": "File",
+  "Name": "File",
+  "FormCode": "Form_File",
+  "SelectRowsQueryCode": "File_SelectRows",
+  "SelectRowQueryCode": "File_SelectRow",
+  "UpdateQueryCode": "File_UpdateRow",
+  "DeleteQueryCode": "File_DeleteRow"
+}

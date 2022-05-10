@@ -1,0 +1,82 @@
+{
+  "ModelType": "Query",
+  "Code": "Test_Mask_InsertRow",
+  "Name": "Test_Mask_InsertRow",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": false,
+  "Parameters": [
+    {
+      "Code": "@PhoneNumber1",
+      "Name": "PhoneNumber1",
+      "ParameterType": "Text",
+      "IsPrimaryKey": false,
+      "IsPageOffsetRows": false,
+      "IsPageLimitRows": false
+    },
+    {
+      "Code": "@PhoneNumber2",
+      "Name": "PhoneNumber2",
+      "ParameterType": "Text",
+      "IsPrimaryKey": false,
+      "IsPageOffsetRows": false,
+      "IsPageLimitRows": false
+    },
+    {
+      "Code": "@PhoneNumber3",
+      "Name": "PhoneNumber3",
+      "ParameterType": "Text",
+      "IsPrimaryKey": false,
+      "IsPageOffsetRows": false,
+      "IsPageLimitRows": false
+    },
+    {
+      "Code": "@PhoneNumber4",
+      "Name": "PhoneNumber4",
+      "ParameterType": "Text",
+      "IsPrimaryKey": false,
+      "IsPageOffsetRows": false,
+      "IsPageLimitRows": false
+    },
+    {
+      "Code": "@CarNumber",
+      "Name": "CarNumber",
+      "ParameterType": "Text",
+      "IsPrimaryKey": false,
+      "IsPageOffsetRows": false,
+      "IsPageLimitRows": false
+    },
+    {
+      "Code": "@Distance",
+      "Name": "Distance",
+      "ParameterType": "Text",
+      "IsPrimaryKey": false,
+      "IsPageOffsetRows": false,
+      "IsPageLimitRows": false
+    },
+    {
+      "Code": "@Percent",
+      "Name": "Percent",
+      "ParameterType": "Text",
+      "IsPrimaryKey": false,
+      "IsPageOffsetRows": false,
+      "IsPageLimitRows": false
+    },
+    {
+      "Code": "@NumberSum",
+      "Name": "NumberSum",
+      "ParameterType": "Text",
+      "IsPrimaryKey": false,
+      "IsPageOffsetRows": false,
+      "IsPageLimitRows": false
+    },
+    {
+      "Code": "@NumberPercent",
+      "Name": "NumberPercent",
+      "ParameterType": "Text",
+      "IsPrimaryKey": false,
+      "IsPageOffsetRows": false,
+      "IsPageLimitRows": false
+    }
+  ]
+}

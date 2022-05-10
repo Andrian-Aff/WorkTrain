@@ -1,0 +1,8 @@
+{
+  "ModelType": "Query",
+  "Code": "Template_UpdateRow",
+  "Name": "Template_UpdateRow",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": false
+}

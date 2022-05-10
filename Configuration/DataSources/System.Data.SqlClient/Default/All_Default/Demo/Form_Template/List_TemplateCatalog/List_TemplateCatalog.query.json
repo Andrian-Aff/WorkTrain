@@ -1,0 +1,48 @@
+{
+  "ModelType": "Query",
+  "Code": "List_TemplateCatalog",
+  "Name": "List_TemplateCatalog",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": false,
+  "Columns": [
+    {
+      "Code": "Id",
+      "Name": "Id",
+      "Position": 0,
+      "IsPrintable": false,
+      "SqlName": "[Id]",
+      "FilterParameterCode": "@Id"
+    },
+    {
+      "Code": "ParentId",
+      "Name": "ParentId",
+      "Position": 1,
+      "IsPrintable": false,
+      "SqlName": "[ParentId]",
+      "FilterParameterCode": "@ParentId"
+    },
+    {
+      "Code": "Name",
+      "Name": "Name",
+      "Position": 2,
+      "IsPrintable": false,
+      "SqlName": "[Name]",
+      "FilterParameterCode": "@Name"
+    }
+  ],
+  "Parameters": [
+    {
+      "Code": "@pageLimitRows",
+      "Name": "pageLimitRows",
+      "ParameterType": "Integer",
+      "IsPageLimitRows": true
+    },
+    {
+      "Code": "@pageOffsetRows",
+      "Name": "pageOffsetRows",
+      "ParameterType": "Integer",
+      "IsPageOffsetRows": true
+    }
+  ]
+}

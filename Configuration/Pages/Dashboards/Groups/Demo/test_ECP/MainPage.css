@@ -1,0 +1,31 @@
+.main-group {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 24px;
+}
+
+.input-group {
+  background: #d1d1d1;
+  padding: 25px;
+}
+
+.items-container {
+  padding: 25px;
+}
+
+.input-group {
+  margin: 10px;
+}
+
+#formElem {
+  margin: 10px;
+}
+
+#containerPassword {
+  margin: 10px;
+}
+
+#containerPasswordLabel {
+  margin: 10px;
+}
+

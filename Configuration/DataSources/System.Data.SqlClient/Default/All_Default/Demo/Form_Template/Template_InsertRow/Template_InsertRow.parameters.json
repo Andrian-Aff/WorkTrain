@@ -1,0 +1,58 @@
+[
+  {
+    "Code": "@ColImage",
+    "Name": "ColImage"
+  },
+  {
+    "Code": "@ColVarchar",
+    "Name": "ColVarchar"
+  },
+  {
+    "Code": "@ColIntTree",
+    "Name": "ColIntTree",
+    "ParameterType": "Integer"
+  },
+  {
+    "Code": "@ColTime",
+    "Name": "ColTime",
+    "ParameterType": "DateTime"
+  },
+  {
+    "Code": "@ColDateTime",
+    "Name": "ColDateTime",
+    "ParameterType": "DateTime"
+  },
+  {
+    "Code": "@ColFileName",
+    "Name": "ColFileName"
+  },
+  {
+    "Code": "@ColDate",
+    "Name": "ColDate",
+    "ParameterType": "DateTime"
+  },
+  {
+    "Code": "@ColChar",
+    "Name": "ColChar"
+  },
+  {
+    "Code": "@ColBitCheck",
+    "Name": "ColBitCheck",
+    "ParameterType": "Boolean"
+  },
+  {
+    "Code": "@ColFile",
+    "Name": "ColFile",
+    "ParameterType": "Varbinary"
+  },
+  {
+    "Code": "@ColIntRadio",
+    "Name": "ColIntRadio",
+    "ParameterType": "Integer"
+  },
+  {
+    "Code": "@ColDecimal",
+    "Name": "ColDecimal",
+    "ParameterType": "Decimal"
+  }
+]

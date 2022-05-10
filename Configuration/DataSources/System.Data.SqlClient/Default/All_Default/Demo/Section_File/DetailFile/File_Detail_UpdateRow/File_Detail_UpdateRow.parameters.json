@@ -1,0 +1,26 @@
+[
+  {
+    "Code": "@File_Comment",
+    "Name": "File_Comment"
+  },
+  {
+    "Code": "@Id",
+    "Name": "Id",
+    "ParameterType": "Integer",
+    "IsPrimaryKey": true
+  },
+  {
+    "Code": "@File",
+    "Name": "File",
+    "ParameterType": "Varbinary"
+  },
+  {
+    "Code": "@Name",
+    "Name": "Name"
+  },
+  {
+    "Code": "@UpdatedById",
+    "Name": "UpdatedById",
+    "ParameterType": "CurrentUserId"
+  }
+]

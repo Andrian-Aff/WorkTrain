@@ -1,0 +1,38 @@
+.send-button{
+    cursor: pointer;
+    width: 70px;
+    height: 25px;
+    background-color: #3977c9;
+    border: none;
+    border-radius: 2%;
+    margin-right: 10px;
+    color: white;
+}
+
+.send-button:disabled {
+    pointer-events: none;
+    color: currentColor;
+    opacity: 0.5;
+    background-color: gray
+}
+
+.add-input-message{
+    width: 130px;
+    text-align: center;
+    border: 1px solid #15BDF4;
+}
+
+.send-input-btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.send-input-btn-panel{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.main-menu{
+    background-color: red !important;
+}

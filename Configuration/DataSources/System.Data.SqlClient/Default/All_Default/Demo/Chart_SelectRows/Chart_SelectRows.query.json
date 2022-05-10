@@ -1,0 +1,9 @@
+{
+  "ModelType": "Query",
+  "Code": "Chart_SelectRows",
+  "Name": "Chart_SelectRows",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": false,
+  "Parameters": []
+}

@@ -1,0 +1,35 @@
+{
+  "Code": "Main",
+  "Name": "Основна інформація",
+  "Position": 1,
+  "Fields": [
+    {
+      "Code": "File",
+      "Name": "File",
+      "FieldType": "file",
+      "Position": 1,
+      "Width": "100%",
+      "FileNameColumnCode": "Name"
+    },
+    {
+      "Code": "Name",
+      "Name": "Name",
+      "FieldType": "text",
+      "Width": "100%",
+      "Position": 2
+    },
+    {
+      "Code": "File_Comment",
+      "Name": "File_Comment",
+      "FieldType": "text",
+      "Width": "100%",
+      "Position": 3
+    },
+    {
+      "Code": "File_Id",
+      "Name": "File_Id",
+      "FieldType": "number",
+      "Position": 4
+    }
+  ]
+}

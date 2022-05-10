@@ -1,0 +1,8 @@
+{
+  "ModelType": "Query",
+  "Code": "TemplateFiles_InsertRow",
+  "Name": "TemplateFiles_InsertRow",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": false
+}

@@ -1,0 +1,13 @@
+{
+  "Add": {
+    "InsertQueryCode": "Template_InsertRow"
+  },
+  "ModelType": "Section",
+  "Code": "Form_Template",
+  "Name": "Form_Template",
+  "FormCode": "Form_Template",
+  "SelectRowsQueryCode": "Template_SelectRows",
+  "SelectRowQueryCode": "Template_SelectRow",
+  "UpdateQueryCode": "Template_UpdateRow",
+  "DeleteQueryCode": "Template_DeleteRow"
+}

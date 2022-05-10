@@ -1,0 +1,1 @@
+SELECT 100 Received, 60 IsAdressPhone, 15 IsPhone, 5 IsAdress, 20 IsNotAdressPhone, 20 Procent

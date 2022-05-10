@@ -1,0 +1,96 @@
+{
+  "Code": "Group1",
+  "Name": "Group1",
+  "Position": 1,
+  "Fields": [
+    {
+      "Code": "ColDate",
+      "Name": "ColDate",
+      "FieldType": "date",
+      "Position": 1
+    },
+    {
+      "Code": "ColTime",
+      "Name": "ColTime",
+      "FieldType": "time",
+      "Position": 2
+    },
+    {
+      "Code": "ColDateTime",
+      "Name": "ColDateTime",
+      "FieldType": "date-time",
+      "Position": 3
+    },
+    {
+      "Code": "ColChar",
+      "Name": "ColChar",
+      "FieldType": "text",
+      "Position": 4
+    },
+    {
+      "Code": "ColVarchar",
+      "Name": "ColVarchar",
+      "FieldType": "text",
+      "Position": 5
+    },
+    {
+      "Code": "ColIntRadio",
+      "Name": "ColIntRadio",
+      "FieldType": "radio",
+      "Position": 6,
+      "Items": [
+        {
+          "Code": "1",
+          "Name": "Значение1"
+        },
+        {
+          "Code": "2",
+          "Name": "Значение2"
+        }
+      ]
+    },
+    {
+      "Code": "ColBitCheck",
+      "Name": "ColBitCheck",
+      "FieldType": "checkbox",
+      "Position": 7
+    },
+    {
+      "Code": "ColIntTree",
+      "Name": "ColIntTree",
+      "FieldType": "lookup",
+      "Position": 8,
+      "QueryCode": "List_TemplateCatalog",
+      "KeyColumnCode": "Id",
+      "DisplayColumnCode": "Name",
+      "QueryParameters": [],
+      "LookupType": "tree",
+      "ParentColumnCode": "ParentId"
+    },
+    {
+      "Code": "ColFile",
+      "Name": "ColFile",
+      "FieldType": "file",
+      "Position": 9,
+      "FileNameColumnCode": "ColFileName"
+    },
+    {
+      "Code": "ColFileName",
+      "Name": "ColFileName",
+      "FieldType": "text",
+      "Position": 10
+    },
+    {
+      "Code": "ColImage",
+      "Name": "ColImage",
+      "FieldType": "image",
+      "Position": 11
+    },
+    {
+      "Code": "ColDecimal",
+      "Name": "ColDecimal",
+      "FieldType": "number",
+      "Position": 12
+    }
+  ]
+}

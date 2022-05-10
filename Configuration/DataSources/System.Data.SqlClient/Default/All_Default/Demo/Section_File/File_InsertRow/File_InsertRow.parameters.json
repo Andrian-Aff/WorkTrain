@@ -1,0 +1,30 @@
+[
+  {
+    "Code": "@Id",
+    "Name": "Id",
+    "ParameterType": "Integer",
+    "IsPrimaryKey": true
+  },
+  {
+    "Code": "@File_Img",
+    "Name": "File_Img"
+  },
+  {
+    "Code": "@File_Img_Name",
+    "Name": "File_Img_Name"
+  },
+  {
+    "Code": "@File",
+    "Name": "File",
+    "ParameterType": "Varbinary"
+  },
+  {
+    "Code": "@File_Name",
+    "Name": "File_Name"
+  },
+  {
+    "Code": "@CreatedById",
+    "Name": "CreatedById",
+    "ParameterType": "CurrentUserId"
+  }
+]
