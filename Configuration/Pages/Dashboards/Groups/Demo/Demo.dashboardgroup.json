@@ -1,5 +1,6 @@
 {
     "ModelType": "DashboardGroup",
     "Code": "Demo",
-    "Name": "Demo"
+    "Name": "Demo",
+    "Position": 2
   }

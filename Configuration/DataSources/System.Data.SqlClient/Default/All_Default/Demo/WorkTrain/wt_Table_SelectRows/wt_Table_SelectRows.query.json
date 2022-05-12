@@ -1,0 +1,8 @@
+{
+  "ModelType": "Query",
+  "Code": "wt_Table_SelectRows",
+  "Name": "wt_Table_SelectRows",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "Parameters": []
+}

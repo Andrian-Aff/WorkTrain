@@ -1,0 +1,9 @@
+{
+  "ModelType": "Query",
+  "Code": "wt_ChartPie_SelectRows",
+  "Name": "wt_ChartPie_SelectRows",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": false,
+  "Parameters": []
+}

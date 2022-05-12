@@ -1,0 +1,8 @@
+{
+    "ModelType": "DashboardGroup",
+    "Code": "WorkTrain",
+    "Name": "WorkTrain",
+    "Position": 1,
+    "Icon": "person",
+    "IconColor": "#797979"
+}

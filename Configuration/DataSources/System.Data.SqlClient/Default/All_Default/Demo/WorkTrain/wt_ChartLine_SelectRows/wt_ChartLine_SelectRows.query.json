@@ -1,0 +1,9 @@
+{
+  "ModelType": "Query",
+  "Code": "wt_ChartLine_SelectRows",
+  "Name": "wt_ChartLine_SelectRows",
+  "ConnectionCode": "Default",
+  "IsUsedForRightsFilter": false,
+  "IsAnonymousAccess": false,
+  "Parameters": []
+}
