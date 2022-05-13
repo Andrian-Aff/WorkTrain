@@ -116,7 +116,8 @@
         },
     
         series: [{
-            name: 'Співробітників',
+            name: 'Співробітники',
+            data: [3, 1, 0]
         }, ],
     
         responsive: {
@@ -145,28 +146,7 @@
             this.queryExecutor(executeQuery, this.load, this);
       },
       load: function(data) {
-          let rows = data.rows;
-          this.chartConfig.series[0].data = []; 
-              let p1 = {
-                  name: 'Працює',
-                  y: rows[0].values[0]
-              }
-  
-              let p2 = {
-                  name: 'Відпустка',
-                  y: rows[0].values[1]
-              }
-  
-              let p3 = {
-                  name: 'Не працює',
-                  y: rows[0].values[2]
-              }
-  
-
-              this.chartConfig.series[0].data.push(p1); 
-              this.chartConfig.series[0].data.push(p2); 
-              this.chartConfig.series[0].data.push(p3); 
-
+          this.chartConfig.series.data = []; 
           
           this.render(); 
           Array.from(document.querySelectorAll('div[id="null"]')).forEach( el => el.style.overflow = "hidden");
