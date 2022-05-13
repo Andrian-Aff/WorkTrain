@@ -138,7 +138,7 @@
     },
     init: function() {
             let executeQuery = {
-                queryCode: 'wt_ChartLine_SelectRows_1',
+                queryCode: 'wt_ChartLine_SelectRows',
                 parameterValues: [],
                 limit: -1
             };
@@ -146,6 +146,7 @@
             this.queryExecutor(executeQuery, this.load, this);
       },
       load: function(data) {
+          debugger
           this.chartConfig.series.data = []; 
           
           this.render(); 

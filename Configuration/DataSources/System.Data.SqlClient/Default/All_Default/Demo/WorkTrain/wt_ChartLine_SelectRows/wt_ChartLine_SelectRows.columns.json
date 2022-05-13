@@ -1,20 +1,14 @@
 [
   {
-    "Code": "is_work",
-    "Name": "is_work",
+    "Code": "Date_Employ",
+    "Name": "Date_Employ",
     "Position": 0,
     "IsPrintable": false
   },
   {
-    "Code": "is_vacation",
-    "Name": "is_vacation",
+    "Code": "Kolvo",
+    "Name": "Kolvo",
     "Position": 1,
-    "IsPrintable": false
-  },
-  {
-    "Code": "is_not_work",
-    "Name": "is_not_work",
-    "Position": 2,
     "IsPrintable": false
   }
 ]
