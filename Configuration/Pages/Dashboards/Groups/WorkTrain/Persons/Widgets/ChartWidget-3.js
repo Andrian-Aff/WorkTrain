@@ -138,7 +138,7 @@
     },
     init: function() {
             let executeQuery = {
-                queryCode: 'wt_ChartLine_SelectRows',
+                queryCode: 'wt_ChartLine_SelectRows_1',
                 parameterValues: [],
                 limit: -1
             };
