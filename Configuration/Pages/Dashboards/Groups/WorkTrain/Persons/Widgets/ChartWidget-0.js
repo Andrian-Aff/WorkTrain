@@ -103,6 +103,7 @@
             this.queryExecutor(executeQuery, this.load, this);
       },
       load: function(data) {
+        
           let rows = data.rows;
           this.chartConfig.series[0].data = []; 
               let p1 = {

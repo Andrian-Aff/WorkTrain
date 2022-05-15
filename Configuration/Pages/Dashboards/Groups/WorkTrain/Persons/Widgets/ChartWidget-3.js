@@ -106,7 +106,7 @@
         },
     
         xAxis: {
-            categories: ['Працює', 'Відпустка', 'Не працює']
+            categories: []
         },
     
         legend: {
@@ -116,8 +116,8 @@
         },
     
         series: [{
-            name: 'Співробітники',
-            data: [3, 1, 0]
+            name: 'К-сть Співробітників',
+            data: []
         }, ],
     
         responsive: {
@@ -146,9 +146,23 @@
             this.queryExecutor(executeQuery, this.load, this);
       },
       load: function(data) {
-          debugger
-          this.chartConfig.series.data = []; 
-          
+        let rows = data.rows;
+
+        this.chartConfig.series.data= [];
+        this.chartConfig.xAxis.categories = []; 
+          for (let i=0; i< rows.length; i++) {
+              this.chartConfig.xAxis.categories.push(rows[i].values[0]);
+              this.chartConfig.series.data.push(rows[i].values[1]); 
+          };
+        //   console.log(this.chartConfig.series.data);
+        //   console.log(this.chartConfig.xAxis.categories);
+        //   debugger
+          this.chartConfig.xAxis.categories = this.chartConfig.xAxis.categories.map((e)=>{
+            const spD =  e.split('T');
+            return spD[0];
+           })
+        //    console.log(this.chartConfig.xAxis.categories);
+        //    debugger
           this.render(); 
           Array.from(document.querySelectorAll('div[id="null"]')).forEach( el => el.style.overflow = "hidden");
         
