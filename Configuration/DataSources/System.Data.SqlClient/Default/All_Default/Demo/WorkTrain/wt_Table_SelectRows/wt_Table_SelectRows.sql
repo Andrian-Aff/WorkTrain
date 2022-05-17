@@ -6,6 +6,8 @@ SELECT  per.[Id]
       ,d.[Name] as [DepartmentName]
       ,p.[Name] as [PositionName]
       ,s.[Name] as [StatusName]
+      ,per.[Location_Lat]
+      ,per.[Location_Lon]
   FROM [QWPlatform_Core_General].[dbo].[Persons] as per
   left join [QWPlatform_Core_General].[DIM].[Department] as d on d.Id = per.Department_Id
   left join [QWPlatform_Core_General].[DIM].[Position] as p on p.Id = per.Position_Id

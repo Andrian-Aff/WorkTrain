@@ -8,97 +8,18 @@
               </div>
           `;
       },
-    //   chartConfig: { 
-    //       chart: {
-    //         //   height: 300
-    //       },
-    //       credits: {
-    //           enabled: false
-    //       },
-    //       title: {
-    //           text: null
-    //       },
-    //       plotOptions: {
-    //           pie: {
-    //               allowPointSelect: true,
-    //               cursor: 'pointer',
-    //               dataLabels: {
-    //                   enabled: true,
-    //                   format: '<b>{point.name}</b>: {point.y} ({point.percentage:.1f}%)'
-    //               }
-    //           }
-    //       },
-    //       tooltip: {
-    //           headerFormat: '',
-    //           pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
-    //               'Кількість: <b>{point.y}</b><br/>' +
-    //               'Процент: <b>{point.percentage:.1f}</b><br/>'
-    //       },
-    //       legend: {
-    //           align: 'center',
-    //           layout: 'horizontal',
-    //           align: 'center',
-    //           verticlAlign: 'bottom',
-    //           itemDistance: 4,
-    //           margin: 4,
-    //           lineHeight:8,
-    //           alignColumns: false,
-    //           itemStyle:{
-    //               fontWeight:'400'
-    //           }
-    //       },
-    //       series: [
-    //           {
-    //               type: 'pie',
-    //               name: 'Кількість співробітників',
-    //               color: '#b0de35',
-    //               data: []
-    //           }
-    //       ],
-    //       responsive: {
-    //           rules: [{
-    //               condition: {
-    //                   maxWidth: 600
-    //               },
-    //               chartOptions: {
-    //                   xAxis: {
-    //                       labels: {
-    //                           style: {
-    //                               fontSize: '10px'
-    //                           }
-                              
-    //                       }
-    //                   },
-    //                   plotOptions: {
-    //                       column: {
-    //                           dataLabels: {
-    //                               allowOverlap:false,
-    //                               style: {
-    //                                   fontSize: '9.5px'
-    //                               }
-    //                           }
-    //                       }
-    //                   },
-    //                   legend: {
-    //                       alignColumns: false,
-    //                       itemDistance: 10,
-    //                       lineHeight:8,
-    //                       margin:4,
-    //                       padding:3,
-    //                       itemStyle: {
-    //                           fontSize: '9px'
-    //                       }
-    //                   }
-    //               }    
-    //           }]
-    //       }
-    //   },
       chartConfig: {
-
+        chart: {
+            //   height: 300
+            backgroundColor: '#eeeeee00',
+        },
+        credits: {
+                      enabled: false
+                  },
         title: {
             text: 'Структура зайнятості співробітників'
         },
-    
+        
         yAxis: {
             title: {
                 text: 'Кількість співробітників'
@@ -117,8 +38,8 @@
     
         series: [{
             name: 'К-сть Співробітників',
-            data: []
-        }, ],
+            data: [1,2,3,4]
+        }],
     
         responsive: {
             rules: [{
@@ -133,42 +54,82 @@
                     }
                 }
             }]
-        }
+        },
+        plotOptions: {
+            series: {
+                         allowPointSelect: true,
+                         point: {}
+                    }
+            }
+        
     
     },
+    onPointSelect: function(event) {
+            // var message = {
+            //     name: 'showValue',
+            //     package: {
+            //         value: event.context.y
+            //     }
+            // }
+            // this.messageService.publish(message);
+    },
+    subscriptions: [],
+    renderChart: function(message) {
+        if (message.package.selected) {
+            this.chartConfig.title.text = 'Структура зайнятості співробітників'
+            message.package.name = null;
+        } else {
+            this.chartConfig.title.text = message.package.name
+        }
+
+        let executeQuery = {
+            queryCode: 'wt_ChartLine_SelectRows',
+            parameterValues: [
+                {key: '@Name', value: message.package.name}
+            ],
+            limit: -1
+        };    
+        this.queryExecutor(executeQuery, this.load, this);
+    },
     init: function() {
+            this.subscriptions.push(this.messageService.subscribe('pie_selectValue', this.renderChart, this));
+
             let executeQuery = {
                 queryCode: 'wt_ChartLine_SelectRows',
-                parameterValues: [],
+                parameterValues: [
+                    {key: '@Name', value: null}
+                ],
                 limit: -1
-            };
-    
+            };    
             this.queryExecutor(executeQuery, this.load, this);
       },
       load: function(data) {
         let rows = data.rows;
-
-        this.chartConfig.series.data= [];
+        this.chartConfig.series = [{
+                        name: 'К-сть Співробітників',
+                        data: []
+                    }];
         this.chartConfig.xAxis.categories = []; 
           for (let i=0; i< rows.length; i++) {
               this.chartConfig.xAxis.categories.push(rows[i].values[0]);
-              this.chartConfig.series.data.push(rows[i].values[1]); 
+              this.chartConfig.series[0].data.push(rows[i].values[1]); 
           };
-        //   console.log(this.chartConfig.series.data);
-        //   console.log(this.chartConfig.xAxis.categories);
-        //   debugger
           this.chartConfig.xAxis.categories = this.chartConfig.xAxis.categories.map((e)=>{
             const spD =  e.split('T');
             return spD[0];
            })
-        //    console.log(this.chartConfig.xAxis.categories);
-        //    debugger
           this.render(); 
           Array.from(document.querySelectorAll('div[id="null"]')).forEach( el => el.style.overflow = "hidden");
         
       },
+      unsubscribeFromMessages(){
+        for(var i =0; i < this.subscriptions.length; i++) {
+                this.subscriptions[i].unsubscribe();
+        }
+      },
       destroy(){
-      }        
+           this.unsubscribeFromMessages();
+      }      
   };
   }());
   ;

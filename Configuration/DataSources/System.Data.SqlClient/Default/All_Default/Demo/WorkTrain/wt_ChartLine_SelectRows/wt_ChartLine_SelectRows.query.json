@@ -5,5 +5,8 @@
   "ConnectionCode": "Default",
   "IsUsedForRightsFilter": false,
   "IsAnonymousAccess": false,
-  "Parameters": []
+  "Parameters": [{
+    "Code": "@Name",
+    "Name": "Name"
+  }]
 }

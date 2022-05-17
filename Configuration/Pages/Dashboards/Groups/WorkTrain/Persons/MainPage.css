@@ -24,3 +24,9 @@
 #r0 {
     background-color: aqua;
 }
+
+.iconToLink {
+    font-size: 25px;
+    color: blue;
+    cursor: pointer;
+}

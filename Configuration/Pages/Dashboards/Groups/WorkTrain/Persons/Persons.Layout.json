@@ -64,7 +64,7 @@
             "height": "calc(100% - 350px)",
             "minHeight": "100px",
             "minWidth": "calc(100% - 10px)",
-            "backgroundColor": "white",
+            "backgroundColor": "#eee",
             "containerId": "d21"
           }
         ],

@@ -66,6 +66,9 @@
             {
                 dataField: 'StatusName',
                 caption: 'Статус'
+            },
+            {
+                caption: 'Локація'
             }
         ],
         keyExpr: 'Id'
@@ -73,41 +76,43 @@
 
     init: function() {
          this.loadData(this.afterLoadDataHandler);
-
-        // this.dataGridInstance.onCellPrepared.subscribe(e => {
-        //     if(e.column.dataField === 'Region' && e.data !== undefined) {
-        //         fieldHtml = '<b style="text-decoration: underline; color: #004479f2; cursor: pointer;">'+e.data.Region+'</b>';
-        //         e.cellElement.innerHTML = fieldHtml;
-        //     }
-        // });
+        this.dataGridInstance.onCellPrepared.subscribe(e => {
+            if(e.column.caption === 'Локація' && e.data !== undefined) {
+                if (e.data.Location_Lat) {
+                    let icon = this.createElement('span', { className: 'iconToLink dx-icon-map dx-icon-custom-style'});
+                    e.cellElement.appendChild(icon);
+                }
+            }
+        });
 
       
-        // this.dataGridInstance.onCellClick.subscribe(e => {
-        //     e.event.stopImmediatePropagation();
-        //     if(e.column) {
-        //         if(e.column.dataField === 'Region' && e.row !== undefined) {
-        //             // let message = {
-        //             //     name: 'TableFilterChanged',
-        //             //     value: e.key
-        //             // }
-        //             // this.messageService.publish(message); 
-                    
-        //             var date1 = new Date(this.Date);
-        //             var values1 = [ date1.getDate(), date1.getMonth() + 1 ];
-        //             for( var id in values1 ) {
-        //               values1[ id ] = values1[ id ].toString().replace( /^([0-9])$/, '0$1' );
-        //             }
-        //             let formated_start_date =  date1.getFullYear()+'-'+values1[ 1 ]+'-'+values1[ 0 ];
-
-
-        //             this.goToDashboard('Prozorro_Report_Detail', {queryParams: [{'Edr': e.key}, {'SumStart': this.SumStart}, {'SumEnd': this.SumEnd}, {'Date': formated_start_date}]});
-        //             // window.open(location.origin + localStorage.getItem('VirtualPath') + "/sheet/page/Prozorro_Report_Detail?Edr=" + e.key + "&SumStart=" + this.SumStart + "&SumEnd=" + this.SumEnd+ "&Date=" + formated_start_date, "_blank");
-        //         }
-        //     }
-        // });
+        this.dataGridInstance.onCellClick.subscribe(e => {
+            e.event.stopImmediatePropagation();
+            if(e.column) {
+                if(e.column.caption === 'Локація' && e.row !== undefined && e.row.data.Location_Lat) {
+                    let message = {
+                        name: 'Table_OpenLocation',
+                        Location_Lat: e.row.data.Location_Lat,
+                        Location_Lon: e.row.data.Location_Lon
+                    }
+                    this.messageService.publish(message); 
+                    // this.goToDashboard('Prozorro_Report_Detail', {queryParams: [{'Edr': e.key}, {'SumStart': this.SumStart}, {'SumEnd': this.SumEnd}, {'Date': formated_start_date}]});
+                    // window.open(location.origin + localStorage.getItem('VirtualPath') + "/sheet/page/Prozorro_Report_Detail?Edr=" + e.key + "&SumStart=" + this.SumStart + "&SumEnd=" + this.SumEnd+ "&Date=" + formated_start_date, "_blank");
+                }
+            }
+        });
 
 
 
+    },
+    createElement: function(tag, props, ...children) {
+        const element = document.createElement(tag);
+        Object.keys(props).forEach(key => element[key] = props[key]);
+        if(children.length > 0) {
+            children.forEach(child =>{
+                element.appendChild(child);
+            });
+        } return element;
     },
     afterLoadDataHandler: function(data) {
         this.render();

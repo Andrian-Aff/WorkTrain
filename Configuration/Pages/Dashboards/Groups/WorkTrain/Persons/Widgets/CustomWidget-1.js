@@ -11,7 +11,10 @@
                     </div>
                 </div>
                 `,
+      subscriptions: [],
       init: function() {
+        this.subscriptions.push(this.messageService.subscribe('Table_OpenLocation', this.renderMap, this));
+
 
         let ss = document.createElement('link');
             ss.type = 'text/css';
@@ -25,12 +28,13 @@
               s.src = 'https://unpkg.com/leaflet@1.4.0/dist/leaflet.js';
               document.getElementsByTagName('head')[0].appendChild(s);
               s.onload = function() {
-                    let executeQuery = {
-                        queryCode: 'Map_SelectRows',
-                        limit: -1,
-                        parameterValues: []
-                    };
-                    this.queryExecutor(executeQuery, this.load, this);
+                    // let executeQuery = {
+                    //     queryCode: 'Map_SelectRows',
+                    //     limit: -1,
+                    //     parameterValues: []
+                    // };
+                    // this.queryExecutor(executeQuery, this.load, this);
+                    this.load();
               }.bind(this)
           }.bind(this)
 
@@ -50,7 +54,7 @@
 
         this.map = new L.Map('map', {
             center: new L.LatLng(48.696390, 32.169961),
-            zoom: 7,
+            zoom: 5,
             zoomSnap: 0.5,
             maxZoom: 13,
             minZoom: 6,
@@ -58,42 +62,46 @@
             layers: [defaultStyleMap]
         });
           
-
-
-          console.log(data)
           console.log(this.map)
-  
-          for (let i = 0; i < data.rows.length; i++) {
-  
-              let cameraX = parseFloat(data.rows[i].values[0]);
-              let cameraY = parseFloat(data.rows[i].values[1]);
-              let cameraLink = data.rows[i].values[2]
-  
-              var camLink = '';
-              if (cameraLink) {
-                  camLink = `<p style="display: flex;justify-content: center;"><iframe style=" height: 12vw; width: 15.9vw; " src="${cameraLink}"></iframe></p>` 
-              };
-  
-              let buttonStyle = 'style=" padding: 8px 25px; background-color: #76ad94; border-radius: 15px; border: 2px solid #5d925d; color: white; font-size: 15px; "'
-  
-              let popupTemplate = camLink;
-  
-  
-  
-              var marker = L.marker([cameraX, cameraY], {
-                  icon: L.icon({
-                      iconUrl: 'assets/img/marker-icon.png',
-                      className: 'camera',
-                      iconSize: [40, 60]
-                  })
-              })
-              
-              
-              marker.addTo(this.map).bindPopup(popupTemplate, {
-                  maxWidth: 1000
-              });
-  
-          };
-      }
+      },
+      ActiveLayersObjectLabel: [],
+      renderMap: function (message) {
+          /*CLEAR LAYERS Label*/
+            for (var r = 0; r < this.ActiveLayersObjectLabel.length; r++) {
+                this.map.removeLayer(this.ActiveLayersObjectLabel[r]);
+                for (var t = 0; t < this.ActiveLayersObjectLabel[r].length; t++) {
+                    this.map.removeLayer(this.ActiveLayersObjectLabel[r][t]);
+                }
+            }
+
+
+            let cameraX = parseFloat(message.Location_Lat);
+            let cameraY = parseFloat(message.Location_Lon);
+            var marker = L.marker([cameraX, cameraY], {
+                icon: L.icon({
+                    iconUrl: 'assets/img/marker-icon.png',
+                    className: 'camera',
+                    iconSize: [40, 60]
+                })
+            })
+
+            // marker.addTo(this.map).bindPopup(popupTemplate, {
+            //     maxWidth: 350,
+            //     zIndex: 50000
+            //   });
+
+
+            this.ActiveLayersObjectLabel.push(marker);
+            marker.addTo(this.map);
+
+      },
+      unsubscribeFromMessages(){
+        for(var i =0; i < this.subscriptions.length; i++) {
+                this.subscriptions[i].unsubscribe();
+        }
+      },
+      destroy(){
+           this.unsubscribeFromMessages();
+      }  
     };
 }());

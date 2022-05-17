@@ -19,6 +19,11 @@
               text: null
           },
           plotOptions: {
+              
+                series: {
+                        allowPointSelect: true,
+                        point: {}
+                },
               pie: {
                   allowPointSelect: true,
                   cursor: 'pointer',
@@ -93,6 +98,16 @@
               }]
           }
       },
+      onPointSelect: function(event) {
+            var message = {
+                name: 'pie_selectValue',
+                package: {
+                    name: event.point.name,
+                    selected: event.point.selected
+                }
+            }
+            this.messageService.publish(message);
+      },
       init: function() {
             let executeQuery = {
                 queryCode: 'wt_ChartPie_SelectRows',
@@ -103,7 +118,6 @@
             this.queryExecutor(executeQuery, this.load, this);
       },
       load: function(data) {
-        
           let rows = data.rows;
           this.chartConfig.series[0].data = []; 
               let p1 = {
