@@ -53,16 +53,16 @@
             const defaultStyleMap = streets;
 
             this.map = new L.Map('map', {
-                center:   new L.LatLng(48.696390, 32.169961),
+                // center:   new L.LatLng(48.696390, 32.169961),
                 zoom: 5,
                 zoomSnap: 0.5,
                 maxZoom: 13,
-                minZoom: 6,
+                minZoom: 6, 
                 preferCanvas: true,
                 layers: [defaultStyleMap]
-            });
-
-            console.log(this.map)
+            }).setView([48.696390, 32.169961], 1);
+console.log(L.LatLng);
+           
         },
         ActiveLayersObjectLabel: [],
         renderMap: function (message) {
@@ -84,16 +84,7 @@
                     iconSize: [40, 60],
                    
                 }),
-            })
-
-
-          
-
-
-            //    var popup = L.popup()
-            //         .setLatLng(message.Location_Lat,message.Location_Lon)
-            //         .setContent("You clicked the map at " + e.latlng.toString())
-            //         .openOn(this.map);
+            });
 
           
             marker.addTo(this.map).bindPopup(`<ul class="ul-list">
@@ -105,10 +96,11 @@
             </ul>`, {
                 maxWidth: 350,
                 zIndex: 50000,
-                    }).openPopup()
-                    debugger
-                   
-            this.ActiveLayersObjectLabel.push(marker);
+                    }).openPopup();
+                    
+            this.map.setView([message.Location_Lat, message.Location_Lon])
+             
+            this.ActiveLayersObjectLabel.push(marker)
 
 
         },
