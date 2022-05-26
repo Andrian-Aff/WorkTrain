@@ -30,3 +30,7 @@
     color: blue;
     cursor: pointer;
 }
+
+.ul-list {
+    list-style-type: none
+}

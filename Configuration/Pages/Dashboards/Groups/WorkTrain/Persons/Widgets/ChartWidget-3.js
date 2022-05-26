@@ -115,8 +115,7 @@
               this.chartConfig.series[0].data.push(rows[i].values[1]); 
           };
           this.chartConfig.xAxis.categories = this.chartConfig.xAxis.categories.map((e)=>{
-            const spD =  e.split('T');
-            return spD[0];
+            return e.slice(0, 10)
            })
           this.render(); 
           Array.from(document.querySelectorAll('div[id="null"]')).forEach( el => el.style.overflow = "hidden");

@@ -40,6 +40,7 @@
             {
                 dataField: 'PIB',
                 caption: 'ПІБ'
+        
             },
             {
                 dataField: 'Date_Employ',
@@ -78,10 +79,14 @@
          this.loadData(this.afterLoadDataHandler);
         this.dataGridInstance.onCellPrepared.subscribe(e => {
             if(e.column.caption === 'Локація' && e.data !== undefined) {
+
                 if (e.data.Location_Lat) {
                     let icon = this.createElement('span', { className: 'iconToLink dx-icon-map dx-icon-custom-style'});
                     e.cellElement.appendChild(icon);
                 }
+            }
+            else if(e.column.caption === 'ПІБ') {
+                e.cellElement.style.fontWeight = '600'           
             }
         });
 
@@ -89,13 +94,18 @@
         this.dataGridInstance.onCellClick.subscribe(e => {
             e.event.stopImmediatePropagation();
             if(e.column) {
-                if(e.column.caption === 'Локація' && e.row !== undefined && e.row.data.Location_Lat) {
+                        if(e.column.caption === 'Локація' && e.row !== undefined && e.row.data.Location_Lat) {
                     let message = {
                         name: 'Table_OpenLocation',
+                        data: e.data,
                         Location_Lat: e.row.data.Location_Lat,
                         Location_Lon: e.row.data.Location_Lon
+                    
+                        
                     }
                     this.messageService.publish(message); 
+                    console.log(message.data);
+                   
                     // this.goToDashboard('Prozorro_Report_Detail', {queryParams: [{'Edr': e.key}, {'SumStart': this.SumStart}, {'SumEnd': this.SumEnd}, {'Date': formated_start_date}]});
                     // window.open(location.origin + localStorage.getItem('VirtualPath') + "/sheet/page/Prozorro_Report_Detail?Edr=" + e.key + "&SumStart=" + this.SumStart + "&SumEnd=" + this.SumEnd+ "&Date=" + formated_start_date, "_blank");
                 }
